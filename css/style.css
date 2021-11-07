@@ -406,15 +406,12 @@ img {
   padding: 0 15px;
 }
 .trends__cards {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: 0 -12.5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
 }
 .trends__item {
   max-width: 261px;
-  flex-basis: calc(25% - 25px);
-  margin: 0 12.5px 25px;
 }
 .trends__image {
   margin-bottom: 13px;
@@ -691,15 +688,12 @@ img {
     margin-left: 0;
     max-width: 300px;
   }
-  .trends__item {
-    flex-basis: calc(33.33333% - 25px);
-    margin: 0 12.5px 25px;
+  .trends__cards,
+  .destinations__cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .trends__text {
     display: none;
-  }
-  .destinations__cards {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 650px) {
@@ -718,10 +712,7 @@ img {
   }
 }
 @media screen and (max-width: 575px) {
-  .trends__item {
-    flex-basis: calc(50% - 25px);
-    margin: 0 12.5px 25px;
-  }
+  .trends__cards,
   .destinations__cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -787,21 +778,14 @@ img {
   .trends__link {
     display: none;
   }
+  .trends__cards,
   .destinations__cards {
     grid-template-columns: 1fr;
     margin-bottom: 25px;
   }
+  .trends__item,
   .destinations__item {
     margin: 0 auto;
-  }
-  .trends__cards {
-    margin: 0;
-    justify-content: center;
-  }
-  .trends__item {
-    flex-basis: 100%;
-    margin: 0 0 25px;
-    max-width: 261px;
   }
   .destinations__link-after {
     display: flex;
